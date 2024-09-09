@@ -1,0 +1,282 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link href="CSS/styles-selling.css" rel="stylesheet"/>
+<script src="js/script-selling.js"></script>
+</head>
+<body>
+
+	<!--Thanh Navigator-->
+	 <nav class="navbar navbar-inverse">
+	 
+	 	<div class="container-fluid">
+	 	<div class="navbar-header">
+			<a class="navbar-brand" href="Index.html"><span class="glyphicon glyphicon-home"></span> Trang chủ</a>
+			
+		</div>
+		<ul class="nav navbar-nav">
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="CPU.html">CPU<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+			<li><a href="CPU.html">CPU</a></li>
+			<li><a href="CPU-AMD.html">CPU AMD</a></li>
+			<li><a href="CPU-Intel.html">CPU Intel</a></li>
+		</ul>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="VGA.html">VGA<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+			<li><a href="VGA.html">VGA</a></li>
+			<li><a href="VGA-AMD.html">VGA-AMD</a></li>
+			<li><a href="VGA-NVIDIA.html">VGA-NVIDIA</a></li>
+		</ul>
+			</li>	<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="SSD.html">SSD<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+			<li><a href="SSD.html">SSD</a></li>
+			<li><a href="SSD-M2.html">SSD-M2</a></li>
+			<li><a href="SSD-SATA3.html">SSD-SATA3</a></li>
+		</ul>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="Selling.html"><span class="glyphicon glyphicon-shopping-cart"></span> Trang mua hàng</a></li>
+		</li>
+		</div>
+	 </nav>
+
+
+<div class="container">
+    <h1>Trang mua hàng</h1>
+<table>
+    <tr>
+        <th></th>
+        <th>Tên sản phẩm</th>
+        <th>Đơn giá</th>
+        <th>Nhập số lượng</th>
+        <th>Hình ảnh mẫu</th>
+        <th>Tổng tiền</th>
+    </tr>
+    <tr>
+    <th><input type="checkbox" id="selectAll" onchange="toggleSelectAll()" /></th>
+    <td colspan="5"><b>Chọn tất cả</b></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(1)" /></td>
+        <td class="name"><a href="r5-8500g.html" >CPU AMD Ryzen 5 8500G | 3.5 GHz up to 5.0GHz, 6 Cores 12 Threads, AM5</a></td>
+        <td class="price"><span id="donGia1">4,900,000</span> VND</td>
+        <td><input type="number" id="soLuong1" onchange="calculateTotal(1)" disabled /></td>
+        <td><img class="images" src="images/CPU/CPU-AMD/r5-8500g/r5-8500g.webp" ></td>
+        <td class="price"><span id="tongTien1">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(2)" /></td>
+        <td class="name"><a href="r5-8600g.html" >CPU AMD Ryzen 5 8600G | 4.3 GHz up to 5.0GHz, 6 Cores 12 Threads, AM5</a></td>
+        <td class="price"><span id="donGia2">6,350,000</span> VND</td>
+        <td><input type="number" id="soLuong2" onchange="calculateTotal(2)" disabled /></td>
+        <td><img class="images" src="images/CPU/CPU-AMD/r5-8600g/r5-8600g.webp" ></td>
+        <td class="price"><span id="tongTien2">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(3)" /></td>
+        <td class="name"><a href="r7-8700f.html" >CPU AMD Ryzen 7 8700F Chính hãng | Up to 5GHz, 8 cores 16 threads, 16MB</a></td>
+        <td class="price"><span id="donGia3">7,990,000</span> VND</td>
+        <td><input type="number" id="soLuong3" onchange="calculateTotal(3)" disabled /></td>
+        <td><img class="images" src="images/CPU/CPU-AMD/r7-8700f/r7-8700f.webp" ></td>
+        <td class="price"><span id="tongTien3">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(4)" /></td>
+        <td class="name"><a href="r9-7900.html" >CPU AMD Ryzen 9 7900 Chính hãng | 3.7GHz up to 5.4GHz, 12 Cores 24 Threads, AM5</a></td>
+        <td class="price"><span id="donGia4">11,990,000</span> VND</td>
+        <td><input type="number" id="soLuong4" onchange="calculateTotal(4)" disabled /></td>
+        <td><img class="images" src="images/CPU/CPU-AMD/r9-7900/r9-7900.webp" ></td>
+        <td class="price"><span id="tongTien4">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(5)" /></td>
+        <td class="name"><a href="i3-13100f.html" >CPU Intel Core I3 13100F | LGA1700, Turbo 4.50 GHz, 4C/8T, 12MB, Box Chính Hãng</a></td>
+        <td class="price"><span id="donGia5">2,939,000</span> VND</td>
+        <td><input type="number" id="soLuong5" onchange="calculateTotal(5)" disabled /></td>
+        <td><img class="images" src="images/CPU/CPU-INTEL/i3-13100f/i3-13100f.webp" ></td>
+        <td class="price"><span id="tongTien5">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(6)" /></td>
+        <td class="name"><a href="i5-13400.html" >CPU Intel Core I5 13400 | LGA1700, Turbo 4.60 GHz, 10C/16T, 20MB, Box Chính Hãng</a></td>
+        <td class="price"><span id="donGia6">5,210,000</span> VND</td>
+        <td><input type="number" id="soLuong6" onchange="calculateTotal(6)" disabled /></td>
+        <td><img class="images" src="images/CPU/CPU-INTEL/i5-13400/i5-13400.webp" ></td>
+        <td class="price"><span id="tongTien6">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(7)" /></td>
+        <td class="name"><a href="i5-13500.html" >CPU Intel Core I5 13500 | LGA1700, Turbo 4.80 GHz, 14C/20T, 24MB, Box Chính Hãng</a></td>
+        <td class="price"><span id="donGia7">6,439,000</span> VND</td>
+        <td><input type="number" id="soLuong7" onchange="calculateTotal(7)" disabled /></td>
+        <td><img class="images" src="images/CPU/CPU-INTEL/i5-13500/i5-13500.webp" ></td>
+        <td class="price"><span id="tongTien7">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(8)" /></td>
+        <td class="name"><a href="i7-13700f.html" >CPU Intel Core I7 13700 | LGA1700, Turbo 5.20 GHz, 16C/24T, 30MB, Box Công Ty</a></td>
+        <td class="price"><span id="donGia8">8,579,000</span> VND</td>
+        <td><input type="number" id="soLuong8" onchange="calculateTotal(8)" disabled /></td>
+        <td><img class="images" src="images/CPU/CPU-INTEL/i7-13700f/i7-13700f.webp" ></td>
+        <td class="price"><span id="tongTien8">0</span></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(9)" /></td>
+        <td class="name"><a href="APS-SE20G-256.html" >Ổ Cứng SSD 256GB Pioneer | PCIe Gen3, M.2 NVMe, APS-SE20-256</a></td>
+        <td class="price"><span id="donGia9">533,000</span> VND</td>
+        <td><input type="number" id="soLuong9" onchange="calculateTotal(9)" disabled /></td>
+        <td><img class="images" src="images/SSD/SSD-M2/APS-SE20G-256.webp" ></td>
+        <td class="price"><span id="tongTien9">0</span></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(10)" /></td>
+        <td class="name"><a href="Kioxia 250gb.html" >Ổ cứng SSD 250G KIOXIA M.2 NVMe PCIe 2280 BiCS FLASH TLC (LRC10Z250GG8)</a></td>
+        <td class="price"><span id="donGia10">559,000</span> VND</td>
+        <td><input type="number" id="soLuong10" onchange="calculateTotal(10)" disabled /></td>
+        <td><img class="images" src="images/SSD/SSD-M2/Kioxia 250gb.webp" ></td>
+        <td class="price"><span id="tongTien10">0</span></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(11)" /></td>
+        <td class="name"><a href="n-256gb.html" >Ổ cứng SSD VSP N-256GB | 256GB, M.2 PCIe, Gen 3x4 NVMe</a></td>
+        <td class="price"><span id="donGia11">489,000</span> VND</td>
+        <td><input type="number" id="soLuong11" onchange="calculateTotal(11)" disabled /></td>
+        <td><img class="images" src="images/SSD/SSD-M2/n-256gb.webp" ></td>
+        <td class="price"><span id="tongTien11">0</span></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(12)" /></td>
+        <td class="name"><a href="P300.html" > Ổ Cứng SSD 256G Patriot P300 | PCIe Gen3, M.2 NVMe, P300P256GM28</a></td>
+        <td class="price"><span id="donGia12">549,000</span> VND</td>
+        <td><input type="number" id="soLuong12" onchange="calculateTotal(12)" disabled /></td>
+        <td><img class="images" src="images/SSD/SSD-M2/P300.webp" ></td>
+        <td class="price"><span id="tongTien12">0</span></td>
+    </tr>  
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(13)" /></td>
+        <td class="name"><a href="agi 256gb.html" > Ổ cứng SSD AGI 256GB AI238 SATA</a></td>
+        <td class="price"><span id="donGia13">479,000</span> VND</td>
+        <td><input type="number" id="soLuong13" onchange="calculateTotal(13)" disabled /></td>
+        <td><img class="images" src="images/SSD/SSD-SATA3/agi 256gb.webp" ></td>
+        <td class="price"><span id="tongTien13">0</span></td>
+    </tr> 
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(14)" /></td>
+        <td class="name"><a href="colorful 256gb.html" >Ổ Cứng SSD 256GB Colorful SL500 (2.5 inch Sata III TLC)</a></td>
+        <td class="price"><span id="donGia14">449,000</span> VND</td>
+        <td><input type="number" id="soLuong14" onchange="calculateTotal(14)" disabled /></td>
+        <td><img class="images" src="images/SSD/SSD-SATA3/colorful 256gb.webp" ></td>
+        <td class="price"><span id="tongTien14">0</span></td>
+    </tr> 
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(15)" /></td>
+        <td class="name"><a href="kioxia 240gb.html" >Ổ cứng SSD 240G KIOXIA Sata III 6Gb/s BiCS FLASH </a></td>
+        <td class="price"><span id="donGia15">459,000</span> VND</td>
+        <td><input type="number" id="soLuong15" onchange="calculateTotal(15)" disabled /></td>
+        <td><img class="images" src="images/SSD/SSD-SATA3/kioxia 240gb.webp" ></td>
+        <td class="price"><span id="tongTien15">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(16)" /></td>
+        <td class="name"><a href="Neo 120gb.html" >Ổ cứng SSD Neo Forza NFS12 120GB SATA-III 2.5 inch (NFS121SA312-6007200)</a></td>
+        <td class="price"><span id="donGia16">245,000</span> VND</td>
+        <td><input type="number" id="soLuong16" onchange="calculateTotal(16)" disabled /></td>
+        <td><img class="images" src="images/SSD/SSD-SATA3/Neo 120gb.webp" ></td>
+        <td class="price"><span id="tongTien16">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(17)" /></td>
+        <td class="name"><a href="RX580.html" >Card màn hình VGA ARK RX 580 8GB</a></td>
+        <td class="price"><span id="donGia17">2,390,000</span> VND</td>
+        <td><input type="number" id="soLuong17" onchange="calculateTotal(17)" disabled /></td>
+        <td><img class="images" src="images/VGA/VGA-AMD/RX580.webp" ></td>
+        <td class="price"><span id="tongTien17">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(18)" /></td>
+        <td class="name"><a href="RX5600XT.html" >VGA MSI RX 5600XT 6GB GDDR6 Gaming MX</a></td>
+        <td class="price"><span id="donGia18">17,500,000</span> VND</td>
+        <td><input type="number" id="soLuong18" onchange="calculateTotal(18)" disabled /></td>
+        <td><img class="images" src="images/VGA/VGA-AMD/RX5600XT.webp" ></td>
+        <td class="price"><span id="tongTien18">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(19)" /></td>
+        <td class="name"><a href="RX6900XT.html" >VGA Asus Radeon RX 6900XT 16GB GDDR6 TUF Gaming OC (TUF-RX 6900XT-O16GB-GAMING)</a></td>
+        <td class="price"><span id="donGia19">20,990,000</span> VND</td>
+        <td><input type="number" id="soLuong19" onchange="calculateTotal(19)" disabled /></td>
+        <td><img class="images" src="images/VGA/VGA-AMD/RX6900XT.webp" ></td>
+        <td class="price"><span id="tongTien19">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(20)" /></td>
+        <td class="name"><a href="RX7600XT.html" >Card màn hình VGA GIGABYTE Radeon RX 7600 XT GAMING OC 16G (GV-R76XTGAMING OC-16GD)</a></td>
+        <td class="price"><span id="donGia20">10,590,000</span> VND</td>
+        <td><input type="number" id="soLuong20" onchange="calculateTotal(20)" disabled /></td>
+        <td><img class="images" src="images/VGA/VGA-AMD/RX7600XT.webp" ></td>
+        <td class="price"><span id="tongTien20">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(21)" /></td>
+        <td class="name"><a href="GT1030.html" >Card màn hình VGA ASUS GT 1030 2GB GDDR5 Phoenix OC Edition (PH-GT 1030-O2GB)</a></td>
+        <td class="price"><span id="donGia21">1,920,000</span> VND</td>
+        <td><input type="number" id="soLuong21" onchange="calculateTotal(21)" disabled /></td>
+        <td><img class="images" src="images/VGA/VGA-NVIDIA/gt1030.webp" ></td>
+        <td class="price"><span id="tongTien21">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(22)" /></td>
+        <td class="name"><a href="GTX1650.html" >Card màn hình VGA ASUS Dual GeForce GTX 1650 OC Edition 4GB GDDR6 EVO</a></td>
+        <td class="price"><span id="donGia22">3,450,000</span> VND</td>
+        <td><input type="number" id="soLuong22" onchange="calculateTotal(22)" disabled /></td>
+        <td><img class="images" src="images/VGA/VGA-NVIDIA/gtx1650.webp" ></td>
+        <td class="price"><span id="tongTien22">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(23)" /></td>
+        <td class="name"><a href="RTX3050.html" >Card màn hình VGA ASUS Dual GeForce RTX 3050 OC Edition 6GB GDDR6 (90YV0K60-M0NA00)</a></td>
+        <td class="price"><span id="donGia23">4,590,000</span> VND</td>
+        <td><input type="number" id="soLuong23" onchange="calculateTotal(23)" disabled /></td>
+        <td><img class="images" src="images/VGA/VGA-NVIDIA/RTX3050.webp" ></td>
+        <td class="price"><span id="tongTien23">0</span></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="selectItem" onchange="toggleInput(24)" /></td>
+        <td class="name"><a href="RTX3060.html" >Card màn hình VGA ASUS Dual Geforce RTX 3060 O8G White (DUAL-RTX3060-O8G-WHITE)</a></td>
+        <td class="price"><span id="donGia24">7,090,000</span> VND</td>
+        <td><input type="number" id="soLuong24" onchange="calculateTotal(24)" disabled /></td>
+        <td><img class="images" src="images/VGA/VGA-NVIDIA/RTX3060.webp" ></td>
+        <td class="price"><span id="tongTien24">0</span></td>
+    </tr>
+    <tr>
+        <td colspan="5"><b>Tổng</b></td>
+        <td><span id="tongTienTatCa">0</span></td>
+    </tr>
+   
+</table>
+<a href="Checkout.html" class="btn green">Thanh toán</a>
+<a href="Index.html" class="btn orange">Trở về</a>
+</div>
+<div class="footer">
+    <h4>Liên hệ</h4>
+    <h5>Nguyễn Viết Hoàng Hải<br>
+        
+        Số điện thoại: 0395607764	
+    </h5>
+    </div>
+
+
+</body>
+</html>
+

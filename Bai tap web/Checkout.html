@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link href="css/styles-checkout.css" rel="stylesheet" />
+    <title>Trang Thanh Toán</title>
+</head>
+<body>
+    
+	<!--Thanh Navigator-->
+	 <nav class="navbar navbar-inverse">
+	
+        <div class="container-fluid">
+        <div class="navbar-header">
+           <a class="navbar-brand" href="Index.html"><span class="glyphicon glyphicon-home"></span> Trang chủ</a>
+           
+       </div>
+       <ul class="nav navbar-nav">
+           <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" href="CPU.html">CPU<span class="caret"></span></a>
+           <ul class="dropdown-menu">
+           <li><a href="CPU.html">CPU</a></li>
+           <li><a href="CPU-AMD.html">CPU AMD</a></li>
+           <li><a href="CPU-Intel.html">CPU Intel</a></li>
+       </ul>
+           </li>
+           <li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" href="VGA.html">VGA<span class="caret"></span></a>
+           <ul class="dropdown-menu">
+           <li><a href="VGA.html">VGA</a></li>
+           <li><a href="VGA-AMD.html">VGA-AMD</a></li>
+           <li><a href="VGA-NVIDIA.html">VGA-NVIDIA</a></li>
+       </ul>
+           </li>	<li class="dropdown">
+               <a class="dropdown-toggle" data-toggle="dropdown" href="SSD.html">SSD<span class="caret"></span></a>
+           <ul class="dropdown-menu">
+           <li><a href="SSD.html">SSD</a></li>
+           <li><a href="SSD-M2.html">SSD-M2</a></li>
+           <li><a href="SSD-SATA3.html">SSD-SATA3</a></li>
+       </ul>
+           </li>
+       </ul>
+       <ul class="nav navbar-nav navbar-right">
+          <li><a href="Selling.html"><span class="glyphicon glyphicon-shopping-cart"></span> Trang mua hàng</a></li>
+       </li>
+       </div>
+    </nav>
+
+<div class="container">
+    <div class="left-column">
+        <h2>Thông tin khách hàng</h2>
+        <div class="form-group">
+            <label for="name">Họ và Tên</label>
+            <input type="text" id="name" placeholder="Nhập họ và tên">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Nhập email">
+        </div>
+        <div class="form-group">
+            <label for="address">Địa chỉ</label>
+            <input type="text" id="address" placeholder="Nhập địa chỉ">
+        </div>
+        <div class="form-group">
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" id="phone" placeholder="Nhập số điện thoại">
+        </div>
+        <a href="Index.html" class="btn" onclick="getCustomerInfo()">Thanh toán</a>
+    </div>
+
+    <div class="right-column">
+        <h2>Giá trị đơn hàng</h2>
+            <div class="total">Tổng giá: <span id="tongTienTatCa"></span> VND</div>
+    </div>
+</div>
+
+<script src="JS/script-selling.js"></script>
+<div class="footer">
+    <h4>Liên hệ</h4>
+    <h5>Nguyễn Viết Hoàng Hải<br>
+        
+        Số điện thoại: 0395607764	
+    </h5>
+    </div>
+</body>
+</html>

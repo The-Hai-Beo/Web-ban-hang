@@ -1,0 +1,70 @@
+.container{
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: auto; 
+    margin: auto; 
+    background: whitesmoke; 
+    padding: 6px; 
+    font-size: 20px;
+    
+}
+table{
+    width: 100%; 
+    border-collapse: collapse;
+}
+th ,td {
+    border: 0.5px solid black; 
+    padding: 3px; 
+    text-align: center; 
+    height: auto;
+}
+caption {
+    font-weight: 600; 
+    font-size: 35px;
+}
+body{
+    
+    background-color: white;
+}
+.images { 
+    width: 125px; 
+    height: 125px; 
+    } 
+.name {
+    font-weight: 700;
+    width: 250px;
+    font-size: 16px;
+    text-align: left;
+
+}
+.price{
+    font-weight: 900;
+    width: 175px;
+    font-size: 15px;
+}
+.btn {
+    margin-top: 25px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn.green{
+    background-color: #4CAF50;
+}
+.btn.orange {
+    background-color: #FF5722; /* Cam */
+}
+.btn:hover {
+    background-color:   rgb(247, 247, 223);
+}
+.footer { text-align: center; background-color:rgb(238, 236, 226) ; 
+    padding: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px; 
+    font-size: 50px;
+    } 
